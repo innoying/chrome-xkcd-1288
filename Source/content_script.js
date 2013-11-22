@@ -31,42 +31,34 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(new RegExp("Witnesses", "g"), "These dudes I know");
-	v = v.replace(new RegExp("witnesses", "g"), "these dudes I know");
-	
-	v = v.replace(new RegExp("Allegedly", "g"), "Kinda probably");
-	v = v.replace(new RegExp("allegedly", "g"), "kinda probably");
-	
-	v = v.replace(new RegExp("New study", "g"), "Tumblr post");
-	v = v.replace(new RegExp("new study", "g"), "tumblr post");
-	
-	v = v.replace(new RegExp("Rebuild", "g"), "Avenge");
-	v = v.replace(new RegExp("rebuild", "g"), "avenge");
-	
-	v = v.replace(new RegExp("Space", "g"), "Spaaace");
-	v = v.replace(new RegExp("space", "g"), "spaaace");
-	
-	v = v.replace(new RegExp("Google Glass", "gi"), "Virtual Boy");
-	
-	v = v.replace(new RegExp("Smartphone", "gi"), "Pokédex");
-	
-	v = v.replace(new RegExp("Electric", "g"), "Atomic");
-	v = v.replace(new RegExp("electric", "g"), "atomic");
-	
-	v = v.replace(new RegExp("Senator", "gi"), "Elf-lord");
-	
-	v = v.replace(new RegExp("Car", "g"), "Cat");
-	v = v.replace(new RegExp("car", "g"), "cat");
-	
-	v = v.replace(new RegExp("Election", "g"), "Eating contest");
-	v = v.replace(new RegExp("election", "g"), "eating contest");
-	
-	v = v.replace(new RegExp("Congressional leaders", "gi"), "River spirits");
-	
-	v = v.replace(new RegExp("Homeland Security", "gi"), "Homestar Runner");
-	
-	v = v.replace(new RegExp("Could not be reached for comment", "g"), "Is guilty and everyone knows it");
-	v = v.replace(new RegExp("could not be reached for comment", "g"), "is guilty and everyone knows it");
+	v = v.replace(/\bwitnesses\b/g, "these dudes I know");
+        v = v.replace(/\bWitnesses\b/g, "These dudes I know");
+        v = v.replace(/\ballegedly\b/g, "kinda probably");
+        v = v.replace(/\bnew study\b/g, "tumblr post");
+        v = v.replace(/\bNew study\b/g, "Tumblr post");
+        v = v.replace(/\brebuild\b/g, "avenge");
+        v = v.replace(/\bRebuild\b/g, "Avenge");
+        v = v.replace(/\bSpace\b/g, "Spaaace");
+        v = v.replace(/\bspace\b/g, "spaaace");
+        v = v.replace(/\bGoogle Glass\b/g, "Virtual Boy");
+        v = v.replace(/\bSmartphone\b/g, "Pokédex");
+        v = v.replace(/\bsmartphone\b/g, "Pokédex");
+        v = v.replace(/\bsmartphones\b/g, "Pokédexes");
+        v = v.replace(/\bSmartphone\b/g, "Pokédexes");
+        v = v.replace(/\belectric\b/g, "atomic");
+        v = v.replace(/\bElectric\b/g, "Atomic");
+        v = v.replace(/\bSenator\b/g, "Elf-Lord");
+        v = v.replace(/\bcar\b/g, "cat");
+        v = v.replace(/\bCar\b/g, "Cat");
+        v = v.replace(/\belection\b/g, "eating contest");
+        v = v.replace(/\bElection\b/g, "Eating contest");
+        v = v.replace(/\belections\b/g, "eating contests");
+        v = v.replace(/\bElections\b/g, "Eating contests");
+        v = v.replace(/\bCongressional Leaders\b/g, "River Spirits");
+        v = v.replace(/\bCongressional leaders\b/g, "River Spirits");
+        v = v.replace(/\bcongressional leaders\b/g, "river spirits");
+        v = v.replace(/\bHomeland Security\b/g, "Homestar Runner");
+        v = v.replace(/\bcould not be reached for comment\b/g, "is guilty and everyone knows it");
 	
 	textNode.nodeValue = v;
 }
